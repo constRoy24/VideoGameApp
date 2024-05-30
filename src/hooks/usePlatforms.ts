@@ -5,7 +5,7 @@ import { FetchResponse } from "../services/api-client";
 import apiClient from "../services/api-client";
 import platforms from "../data/platforms";
 
-type Platform = {
+export type Platform = {
   id: number;
   name: string;
   slug: string;

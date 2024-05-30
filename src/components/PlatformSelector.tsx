@@ -1,9 +1,5 @@
 import {
-  HStack,
-  Image,
-  Text,
-  SimpleGrid,
-  Icon,
+
   Menu,
   MenuButton,
   Button,
@@ -11,8 +7,8 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import { BsChevronBarDown } from "react-icons/bs";
-import usePLatforms from "../hooks/usePlatforms";
-import { Platform } from "../hooks/useGames";
+import usePLatforms, {Platform} from "../hooks/usePlatforms";
+
 
 type Props = {
   onSelecPlatform: (platform: Platform) => void;
