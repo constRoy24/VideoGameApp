@@ -22,8 +22,8 @@ const useGames = (gameQuery: GameQuery) => useInfiniteQuery
     queryFn: ({pageParam = 1}) => 
       apiClient.getAll({
         params: {
-          genres: gameQuery.genre?.id,
-          platforms: gameQuery.platform?.id,
+          genres: gameQuery.genreId,
+          platforms: gameQuery.platformId,
           ordering: gameQuery.sortOrder,
           search: gameQuery.searchText,
           page: pageParam
