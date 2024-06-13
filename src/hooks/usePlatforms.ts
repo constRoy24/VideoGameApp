@@ -5,14 +5,9 @@ import { FetchResponse } from "../services/api-client";
 import APIclient from "../services/api-client";
 import platforms from "../data/platforms";
 import ms from "ms";
+import { Platform } from "../entities/Platform";
 
 const apiClient = new APIclient<Platform>('/platforms/lists/parents')
-
-export type Platform = {
-  id: number;
-  name: string;
-  slug: string;
-};
 
 // const usePLatforms = () => useData<Platform>("/platforms/lists/parents");
 

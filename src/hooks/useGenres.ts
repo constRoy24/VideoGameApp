@@ -5,14 +5,9 @@ import ms from 'ms'
 
 import genres from "../data/genres";
 import APIclient from "../services/api-client";
+import { Genre } from "../entities/Genre";
 
 const apiClient = new APIclient<Genre>('/genres')
-
-export type Genre = {
-  id: number;
-  name: string;
-  image_background: string;
-};
 
 // const useGenres = () => useData<Genre>("/genres");
 
