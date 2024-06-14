@@ -5,7 +5,7 @@ import ms from 'ms'
 
 import genres from "../data/genres";
 import APIclient from "../services/api-client";
-import { Genre } from "../entities/Genre";
+import  Genre  from "../entities/Genre";
 
 const apiClient = new APIclient<Genre>('/genres')
 

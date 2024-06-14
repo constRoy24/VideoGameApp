@@ -1,9 +1,9 @@
-import { Genre } from "./Genre";
-import { Platform } from "./Platform";
-import { Publisher } from "./Publishers";
+import  Genre  from "./Genre";
+import  Platform  from "./Platform";
+import  Publisher  from "./Publishers";
 
 
-export type Game = {
+export default interface Game  {
   id: number;
   name: string;
   slug: string;
