@@ -1,4 +1,4 @@
-import { HStack, Image, Text, SimpleGrid, Icon, Badge } from "@chakra-ui/react";
+import {  Badge } from "@chakra-ui/react";
 
 type Props = {
   score: number;

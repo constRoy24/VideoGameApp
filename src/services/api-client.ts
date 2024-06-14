@@ -5,10 +5,11 @@ export type FetchResponse<T> = {
   next: string | null
   results: T[];
 };
+// import.meta.env.VITE_ENDPOINT
 const axiosInstance =  axios.create({
-  baseURL: "https://api.rawg.io/api",
+  baseURL: import.meta.env.VITE_ENDPOINT,
   params: {
-    key: "f1a9ec1e73264dc8a7954f742b8d83ee",
+    key: import.meta.env.VITE_KEY,
   },
 });
 
