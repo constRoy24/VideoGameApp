@@ -13,7 +13,7 @@ import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 import { HStack, Image, Text, SimpleGrid, Icon } from "@chakra-ui/react";
 
-import { Platform } from "../hooks/useGames";
+import { Platform } from "../entities/Platform";
 
 type Props = {
   platforms: Platform[];

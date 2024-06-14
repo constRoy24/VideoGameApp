@@ -1,9 +1,5 @@
 import {
-  HStack,
-  Image,
-  Text,
-  SimpleGrid,
-  Icon,
+
   Menu,
   MenuButton,
   Button,
@@ -12,14 +8,21 @@ import {
 } from "@chakra-ui/react";
 import { BsChevronBarDown } from "react-icons/bs";
 import usePLatforms from "../hooks/usePlatforms";
-import { Platform } from "../hooks/useGames";
+import { Platform } from "../entities/Platform";
+import usePlatform from "../hooks/usePlatform";
+import useGameQueryStore from "../store";
 
-type Props = {
-  onSelecPlatform: (platform: Platform) => void;
-  selectedPlatform: Platform | null;
-};
-const PlatformSelector = ({ onSelecPlatform, selectedPlatform }: Props) => {
+
+
+const PlatformSelector = () => {
   const { data, error } = usePLatforms();
+
+  const setSelectedPlatformId = useGameQueryStore((s=> s.setPlatformId))
+  const selectedPlatformId = useGameQueryStore((s=> s.gameQuery.platformId))
+
+  const selectedPlatform = usePlatform(selectedPlatformId)
+ 
+
 
   if (error) return null;
   return (
@@ -31,7 +34,7 @@ const PlatformSelector = ({ onSelecPlatform, selectedPlatform }: Props) => {
         <MenuList>
           {data?.results.map((platform) => (
             <MenuItem
-              onClick={() => onSelecPlatform(platform)}
+              onClick={() => setSelectedPlatformId(platform.id)}
               key={platform.id}
             >
               {platform.name}
